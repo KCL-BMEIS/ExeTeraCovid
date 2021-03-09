@@ -1,6 +1,6 @@
 {
-  "hystore": {
-    "version": "1.0.0"
+  "exetera": {
+    "version": "1.1.0"
   },
   "schema": {
     "patients": {
@@ -1912,9 +1912,8 @@
         "id"
       ],
       "foreign_keys": {
-        "patient_id": {
-          "space": "patients",
-          "key": "id"
+        "patients": {
+          "patient_id": "id"
         }
       },
       "fields": {
@@ -2451,9 +2450,8 @@
         "id"
       ],
       "foreign_keys": {
-        "patient_id": {
-          "space": "patients",
-          "key": "id"
+        "patients": {
+          "patient_id": "id"
         }
       },
       "fields": {
@@ -2580,9 +2578,8 @@
         "id"
       ],
       "foreign_keys": {
-        "patient_id": {
-          "space": "patients",
-          "key": "id"
+        "patients": {
+          "patient_id": "id"
         }
       },
       "fields": {
@@ -3561,6 +3558,273 @@
           "field_type": "string"
         }
 
+      }
+    },
+    "vaccine_doses": {
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": {
+        "patients": {
+          "patient_id": "id"
+        }
+      },
+      "fields": {
+        "id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "created_at": {
+          "field_type": "datetime"
+        },
+        "updated_at": {
+          "field_type": "datetime"
+        },
+        "sequence": {
+          "field_type": "numeric",
+          "value_type": "int32"
+        },
+        "date_taken_specific": {
+          "field_type": "date",
+          "optional": "true"
+        },
+        "vaccine_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "vv_created_at": {
+          "field_type": "datetime"
+        },
+        "vv_updated_at": {
+          "field_type": "datetime"
+        },
+        "patient_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "brand": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "not_sure": 1,
+              "pfizer": 2,
+              "astrazeneca": 3,
+              "moderna": 4
+            }
+          }
+        },
+        "batch_number": {
+          "field_type": "string"
+        },
+        "description": {
+          "field_type": "string"
+        },
+        "vaccine_type": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "covid_vaccine": 1
+            }
+          }
+        },
+        "country_code": {
+          "field_type": "fixed_string",
+          "length": 2
+        }
+      }
+    },
+    "vaccine_symptoms": {
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": {
+        "vaccine_doses": {
+          "dose_id": "id"
+        },
+        "patients": {
+          "patient_id": "id"
+        }
+      },
+      "fields": {
+        "id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "created_at": {
+          "field_type": "datetime"
+        },
+        "updated_at": {
+          "field_type": "datetime"
+        },
+        "pain": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "redness": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "swelling": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "swollen_armpit_glands": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "warmth": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "itch": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "tenderness": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "bruising": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "other": {
+          "field_type": "string"
+        },
+        "dose_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "patient_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "vd_created_at": {
+          "field_type": "datetime"
+        },
+        "vd_updated_at": {
+          "field_type": "datetime"
+        },
+        "date_taken_specific": {
+          "field_type": "date",
+          "optional": "true"
+        },
+        "sequence": {
+          "field_type": "numeric",
+          "value_type": "int32"
+        },
+        "vaccine_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "vv_created_at": {
+          "field_type": "datetime"
+        },
+        "vv_updated_at": {
+          "field_type": "datetime"
+        },
+        "country_code": {
+          "field_type": "fixed_string",
+          "length": 2
+        }
+      }
+    },
+    "vaccine_hesitancy": {
+      "primary_keys": {
+        "primary_keys": [
+          "id"
+        ]
+      },
+      "foreign_keys": {
+        "patients": {
+          "patient_id": "id"
+        }
+      },
+      "fields": {
+        "id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "created_at": {
+          "field_type": "datetime"
+        },
+        "updated_at": {
+          "field_type": "datetime"
+        },
+        "patient_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "plan": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "no": 0,
+              "unsure": 1,
+              "yes": 2
+            }
+          }
+        },
+        "reason_vaccine_trial": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_religion": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_personal_belief": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_pregnancy_breastfeeding": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_safety": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_knowledge": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_illness": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_availability": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_unnecessary": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_efficacy": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_bad_reaction": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_pfnts": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_vaccine_trial": {
+          "field_type": "string"
+        },
+        "country_code": {
+          "field_type": "fixed_string",
+          "length": 2
+        }
       }
     }
   }
