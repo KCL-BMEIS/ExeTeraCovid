@@ -1,6 +1,6 @@
 {
-  "hystore": {
-    "version": "1.0.0"
+  "exetera": {
+    "version": "1.1.0"
   },
   "schema": {
     "patients": {
@@ -1061,6 +1061,17 @@
             }
           }
         },
+        "is_in_us_origins": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
         "is_in_us_partners_biobank": {
           "field_type": "categorical",
           "categorical": {
@@ -1095,6 +1106,17 @@
           }
         },
         "is_in_us_promise_pcrowd": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "is_in_us_school_reopenings": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -1912,9 +1934,8 @@
         "id"
       ],
       "foreign_keys": {
-        "patient_id": {
-          "space": "patients",
-          "key": "id"
+        "patients": {
+          "patient_id": "id"
         }
       },
       "fields": {
@@ -1951,6 +1972,17 @@
             }
           }
         },
+        "altered_smell": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
         "always_used_shortage": {
           "field_type": "categorical",
           "categorical": {
@@ -1963,6 +1995,17 @@
           }
         },
         "blisters_on_feet": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "brain_fog": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -2058,6 +2101,28 @@
             }
           }
         },
+        "ear_ringing": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "earache": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
         "eye_soreness": {
           "field_type": "categorical",
           "categorical": {
@@ -2082,6 +2147,17 @@
             }
           }
         },
+        "feeling_down": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
         "fever": {
           "field_type": "categorical",
           "categorical": {
@@ -2094,6 +2170,17 @@
           }
         },
         "had_covid_test": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "hair_loss": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -2162,6 +2249,17 @@
           }
         },
         "interacted_any_patients": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "irregular_heartbeat": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -2303,7 +2401,29 @@
             }
           }
         },
+        "rash": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
         "red_welts_on_face_or_lips": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "runny_nose": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -2327,7 +2447,29 @@
             }
           }
         },
+        "skin_burning": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
         "skipped_meals": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "sneezing": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -2351,6 +2493,17 @@
           }
         },
         "sore_throat": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "swollen_glands": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -2419,6 +2572,17 @@
             }
           }
         },
+        "unusual_joint_pains": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
         "unusual_muscle_pains": {
           "field_type": "categorical",
           "categorical": {
@@ -2451,9 +2615,8 @@
         "id"
       ],
       "foreign_keys": {
-        "patient_id": {
-          "space": "patients",
-          "key": "id"
+        "patients": {
+          "patient_id": "id"
         }
       },
       "fields": {
@@ -2488,6 +2651,10 @@
         "date_taken_specific": {
           "field_type": "date"
         },
+        "days_in_fridge": {
+          "field_type": "numeric",
+          "value_type": "float32"
+        },
         "deleted": {
           "field_type": "categorical",
           "categorical": {
@@ -2500,6 +2667,17 @@
           }
         },
         "invited_to_test": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "is_rapid_test": {
           "field_type": "categorical",
           "categorical": {
             "value_type": "int8",
@@ -2524,7 +2702,8 @@
               "work": 6,
               "local_health_dept": 7,
               "drop_in_test_centre": 8,
-              "other": 9
+              "school": 9,
+              "other": 10
             }
           }
         },
@@ -2561,6 +2740,10 @@
             }
           }
         },
+        "time_of_test": {
+          "field_type": "fixed_string",
+          "length": 8
+        },
         "trained_worker": {
           "field_type": "categorical",
           "categorical": {
@@ -2572,6 +2755,17 @@
               "unsure": 3
             }
           }
+        },
+        "type": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "generic": 1,
+              "nhs_study": 2
+            }
+          }
         }
       }
     },
@@ -2580,9 +2774,8 @@
         "id"
       ],
       "foreign_keys": {
-        "patient_id": {
-          "space": "patients",
-          "key": "id"
+        "patients": {
+          "patient_id": "id"
         }
       },
       "fields": {
@@ -2649,6 +2842,61 @@
         "hours_sleep_weekdays": {
           "field_type": "numeric",
           "value_type": "float32"
+        },
+        "lof_anxiety": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "lof_financial_limitations": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "lof_other": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "lof_shelter_in_place": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
+        },
+        "lof_shortages": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "False": 1,
+              "True": 2
+            }
+          }
         },
         "lost_control": {
           "field_type": "categorical",
@@ -3561,6 +3809,893 @@
           "field_type": "string"
         }
 
+      }
+    },
+    "vaccine_doses": {
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": {
+        "patients": {
+          "patient_id": "id"
+        }
+      },
+      "fields": {
+        "id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "created_at": {
+          "field_type": "datetime"
+        },
+        "updated_at": {
+          "field_type": "datetime"
+        },
+        "sequence": {
+          "field_type": "numeric",
+          "value_type": "int32"
+        },
+        "date_taken_specific": {
+          "field_type": "date",
+          "optional": "true"
+        },
+        "vaccine_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "vv_created_at": {
+          "field_type": "datetime"
+        },
+        "vv_updated_at": {
+          "field_type": "datetime"
+        },
+        "patient_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "brand": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "not_sure": 1,
+              "pfizer": 2,
+              "astrazeneca": 3,
+              "moderna": 4,
+              "johnson": 5
+            }
+          }
+        },
+        "batch_number": {
+          "field_type": "string"
+        },
+        "description": {
+          "field_type": "string"
+        },
+        "vaccine_type": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "covid_vaccine": 1
+            }
+          }
+        },
+        "country_code": {
+          "field_type": "fixed_string",
+          "length": 2
+        }
+      }
+    },
+    "vaccine_symptoms": {
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": {
+        "vaccine_doses": {
+          "dose_id": "id"
+        },
+        "patients": {
+          "patient_id": "id"
+        }
+      },
+      "fields": {
+        "id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "created_at": {
+          "field_type": "datetime"
+        },
+        "updated_at": {
+          "field_type": "datetime"
+        },
+        "pain": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "redness": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "swelling": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "swollen_armpit_glands": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "warmth": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "itch": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "tenderness": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "bruising": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "other": {
+          "field_type": "string"
+        },
+        "dose_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "patient_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "vd_created_at": {
+          "field_type": "datetime"
+        },
+        "vd_updated_at": {
+          "field_type": "datetime"
+        },
+        "date_taken_specific": {
+          "field_type": "date",
+          "optional": "true"
+        },
+        "sequence": {
+          "field_type": "numeric",
+          "value_type": "int32"
+        },
+        "vaccine_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "vv_created_at": {
+          "field_type": "datetime"
+        },
+        "vv_updated_at": {
+          "field_type": "datetime"
+        },
+        "country_code": {
+          "field_type": "fixed_string",
+          "length": 2
+        }
+      }
+    },
+    "vaccine_hesitancy": {
+      "primary_keys": {
+        "primary_keys": [
+          "id"
+        ]
+      },
+      "foreign_keys": {
+        "patients": {
+          "patient_id": "id"
+        }
+      },
+      "fields": {
+        "id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "created_at": {
+          "field_type": "datetime"
+        },
+        "updated_at": {
+          "field_type": "datetime"
+        },
+        "patient_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "country_code": {
+          "field_type": "fixed_string",
+          "length": 2
+        },
+        "plan": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "no": 0,
+              "unsure": 1,
+              "yes": 2
+            }
+          }
+        },
+        "reason_availability": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_bad_reaction": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_efficacy": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_illness": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_knowledge": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_other": {
+          "field_type": "string"
+        },
+        "reason_personal_belief": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_pfnts": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_pregnancy_breastfeeding": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_religion": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_safety": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_unnecessary": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        },
+        "reason_vaccine_trial": {
+          "field_type": "numeric",
+          "value_type": "bool"
+        }
+      }
+    },
+    "mental_health": {
+      "primary_keys": [],
+      "foreign_keys": {
+        "patients": {
+          "patient_id": "id"
+        }
+      },
+      "fields": {
+        "id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "created_at": {
+          "field_type": "datetime"
+        },
+        "updated_at": {
+          "field_type": "datetime"
+        },
+        "patient_id": {
+          "field_type": "fixed_string",
+          "length": 32
+        },
+        "country_code": {
+          "field_type": "fixed_string",
+          "length": 2
+        },
+        "able_to_get_support": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NO": 2,
+              "YES": 3
+            }
+          }
+        },
+        "about_your_learning_needs": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NO": 2,
+              "YES": 3
+            }
+          }
+        },
+        "add_adhd": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "agoraphobia": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "autism": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "being_physically_active_or_doing_exercise": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "depression": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "drinking_alcohol": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "dyscalculia": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "dysgraphia": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "dyslexia": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "eating": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "eating_savoury_snacks_or_confectionery": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "engaging_in_orgs_clubs_socs": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "ever_diagnosed_with_mental_health_condition": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NO": 2,
+              "YES": 3
+            }
+          }
+        },
+        "feeling_down": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NOT_AT_ALL": 2,
+              "SEVERAL_DAYS": 3,
+              "MORE_THAN_HALF_THE_DAYS": 4,
+              "NEARLY_EVERY_DAY": 5
+            }
+          }
+        },
+        "feeling_more_alone": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "feeling_nervous": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NOT_AT_ALL": 2,
+              "SEVERAL_DAYS": 3,
+              "MORE_THAN_HALF_THE_DAYS": 4,
+              "NEARLY_EVERY_DAY": 5
+            }
+          }
+        },
+        "generalised_anxiety_disorder": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "history_other": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "history_other_text": {
+          "field_type": "string"
+        },
+        "history_prefer_not_to_say": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "interacting_face_to_face_with_family_friends": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "learning_other": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "learning_other_text": {
+          "field_type": "string"
+        },
+        "learning_prefer_not_to_say": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "little_interest_or_pleasure_in_doing_things": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NOT_AT_ALL": 2,
+              "SEVERAL_DAYS": 3,
+              "MORE_THAN_HALF_THE_DAYS": 4,
+              "NEARLY_EVERY_DAY": 5
+            }
+          }
+        },
+        "mania_hypomania_bipolar_manic_depression": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "needed_support_in_the_last_6_months": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NO": 2,
+              "YES": 3
+            }
+          }
+        },
+        "non_verbal": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "not_being_able_to_control_worrying": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "DECLINE_TO_SAY": 1,
+              "NOT_AT_ALL": 2,
+              "SEVERAL_DAYS": 3,
+              "MORE_THAN_HALF_THE_DAYS": 4,
+              "NEARLY_EVERY_DAY": 5
+            }
+          }
+        },
+        "ocd": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "oral": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "panic": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "personality": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "psychosis_or_psychotic_illness": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "ptsd": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "reading_watching_listening_to_the_news": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "relaxation_mindfulness_meditation": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "schizophrenia": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "sensory_impairment": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "sleeping_well": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "smoking_or_vaping": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "social_anxiety": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "specific_phobias": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "spending_time_in_green_spaces": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "spending_time_with_pets": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "substance_use": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "True": 1,
+              "False": 2
+            }
+          }
+        },
+        "talking_to_family_friends_via_phone_or_technology": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "using_devices_with_a_screen": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        },
+        "working": {
+          "field_type": "categorical",
+          "categorical": {
+            "value_type": "int8",
+            "strings_to_values": {
+              "": 0,
+              "NOT_APPLICABLE": 1,
+              "LESS": 2,
+              "NO_CHANGE": 3,
+              "MORE": 4
+            }
+          }
+        }
       }
     }
   }
