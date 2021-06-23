@@ -13,7 +13,8 @@
           "length": 32
         },
         "created_at": {
-          "field_type": "datetime"
+          "field_type": "datetime",
+          "create_day_field": true
         },
         "updated_at": {
           "field_type": "datetime"
@@ -1948,7 +1949,8 @@
           "length": 32
         },
         "created_at": {
-          "field_type": "datetime"
+          "field_type": "datetime",
+          "create_day_field": true
         },
         "updated_at": {
           "field_type": "datetime"
@@ -2629,7 +2631,8 @@
           "length": 32
         },
         "created_at": {
-          "field_type": "datetime"
+          "field_type": "datetime",
+          "create_day_field": true
         },
         "updated_at": {
           "field_type": "datetime"
@@ -2722,7 +2725,8 @@
               "spit_tube": 4,
               "blood_sample": 5,
               "blood_sample_finger_prick": 6,
-              "blood_sample_needle_draw": 7
+              "blood_sample_needle_draw": 7,
+              "nose_throat_swab_and_saliva": 8
             },
             "out_of_range": "freetext"
           }
@@ -3826,7 +3830,8 @@
           "length": 32
         },
         "created_at": {
-          "field_type": "datetime"
+          "field_type": "datetime",
+          "create_day_field": true
         },
         "updated_at": {
           "field_type": "datetime"
@@ -3907,7 +3912,8 @@
           "length": 32
         },
         "created_at": {
-          "field_type": "datetime"
+          "field_type": "datetime",
+          "create_day_field": true
         },
         "updated_at": {
           "field_type": "datetime"
@@ -4002,7 +4008,8 @@
           "length": 32
         },
         "created_at": {
-          "field_type": "datetime"
+          "field_type": "datetime",
+          "create_day_field": true
         },
         "updated_at": {
           "field_type": "datetime"
@@ -4092,7 +4099,8 @@
           "length": 32
         },
         "created_at": {
-          "field_type": "datetime"
+          "field_type": "datetime",
+          "create_day_field": true
         },
         "updated_at": {
           "field_type": "datetime"
